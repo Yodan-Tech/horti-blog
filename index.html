@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mekonnen Solomon | Ethiopia Horticulture Insights</title>
+    <style>
+        :root { --ethio-green: #2d5a27; --ethio-gold: #f7b500; --text: #2c3e50; --bg: #fdfdfb; }
+        body { font-family: 'Times New Roman', Times, serif; line-height: 1.7; margin: 0; background-color: var(--bg); color: var(--text); }
+        .container { max-width: 900px; margin: auto; padding: 0 25px; }
+        
+        /* Header & Profile */
+        header { background: var(--ethio-green); color: white; padding: 60px 0; text-align: center; border-bottom: 5px solid var(--ethio-gold); }
+        .logo-placeholder { width: 120px; height: 120px; background: #eee; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #666; border-radius: 50%; border: 3px solid white; overflow: hidden; }
+        .logo-placeholder img { width: 100%; height: auto; }
+        header h1 { margin: 10px 0; font-size: 2.2rem; }
+        header p { margin: 5px 0; opacity: 0.9; font-style: italic; }
+
+        .author-card { background: white; padding: 30px; border: 1px solid #ddd; border-radius: 4px; margin-top: -40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .author-card h3 { margin-top: 0; color: var(--ethio-green); border-bottom: 2px solid var(--ethio-gold); display: inline-block; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.95rem; margin-top: 15px; }
+
+        /* Main Story Styling */
+        .featured-story { background: white; padding: 50px 0; }
+        .featured-story h2 { font-size: 2.4rem; line-height: 1.2; color: #1a1a1a; margin-bottom: 10px; }
+        .byline { font-weight: bold; color: var(--ethio-green); margin-bottom: 30px; display: block; }
+        .story-body { font-size: 1.15rem; text-align: justify; white-space: pre-wrap; color: #333; }
+
+        /* Subscription */
+        .sub-box { background: #1a1a1a; color: white; padding: 40px; text-align: center; border-radius: 8px; margin: 60px 0; }
+        .sub-box input { padding: 12px; width: 250px; border-radius: 4px; border: none; }
+        .sub-box button { padding: 12px 25px; background: var(--ethio-gold); color: black; border: none; font-weight: bold; cursor: pointer; }
+
+        /* Footer */
+        footer { background: #f4f4f4; padding: 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #ddd; }
+        .admin-btn { color: #999; text-decoration: none; font-size: 0.8rem; }
+        
+        #adminPanel { display: none; background: #fff3cd; padding: 20px; border: 1px solid #ffeeba; margin-top: 20px; }
+        textarea, input[type="text"] { width: 100%; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo-placeholder">
+            <img src="logo.png" alt="Logo"> 
+        </div>
+        <h1>Ethiopian Horticulture Export Insights</h1>
+        <p>A Strategic Perspective on the Floriculture Sub-Sector</p>
+    </div>
+</header>
+
+<div class="container">
+    <section class="author-card">
+        <h3>Senior Official Profile</h3>
+        <div class="contact-grid">
+            <div>
+                <strong>Mekonnen Solomon</strong><br>
+                Horticulture Export Coordinator<br>
+                Ministry of Agriculture, Ethiopia
+            </div>
+            <div>
+                <strong>Email:</strong> ehdaplan@gmail.com<br>
+                <strong>Tel:</strong> +251 921 297 887<br>
+                <strong>Location:</strong> Addis Ababa, Ethiopia
+            </div>
+        </div>
+    </section>
+
+    <article class="featured-story">
+        <h2>A Strategic Imperative Amid Global Supply Chain Shifts: Pioneering Ocean Freight for Ethiopia’s Blossom Exports</h2>
+        <span class="byline">By Mekonnen Solomon</span>
+        
+        <div class="story-body">
+As a senior staff member and horticulture export coordinator at Ethiopia’s Ministry of Agriculture, I have enthusiastic years to advance the nation’s floriculture sub-sector, particularly its vibrant rose, summer flower and ornamental cutting export business. This subsector stands as a beacon of economic promise, generating substantial foreign exchange and employment opportunities. 
+
+However, in the face of mounting challenges—ranging from escalating costs of jet fuel and increasingly stringent sustainability regulations—the industry’s traditional reliance on air cargo is proving unsustainable. I contend that the pilot sea freight shipment of flowers executed in June 2025 represents a significant milestone. This initiative, involving four prominent Ethiopian flower farms from low land, mid land and highland and transport of approximately 247,915 stems of summer flowers and roses totalling 7,177 kilograms to Europe, not only demonstrates the feasibility of ocean transport but also illuminates a pathway toward cost reduction, enhanced resilience, and long-term competitiveness. 
+
+By potentially slashing logistics expenses by 50-70%, this approach could fundamentally reshape Ethiopia’s horticultural exports, serving as a model for other developing economies navigating similar transitions...
+
+[Click Archive below to read full historical posts]
+        </div>
+    </article>
+
+    <section id="archive">
+        <h3 style="border-bottom: 2px solid var(--ethio-green);">Previous Stories & Updates</h3>
+        <div id="blog-feed">
+            </div>
+    </section>
+
+    <section class="sub-box">
+        <h3>Subscribe to Official Updates</h3>
+        <p>Stay informed on Ethiopia's horticulture export strategic shifts.</p>
+        <input type="email" id="subEmail" placeholder="Your Email Address">
+        <button onclick="subscribeUser()">Subscribe</button>
+    </section>
+
+    <div id="adminPanel">
+        <h3>Post New Entry</h3>
+        <input type="text" id="postTitle" placeholder="Story Title">
+        <textarea id="postContent" rows="10" placeholder="Paste your story here..."></textarea>
+        <button onclick="publishPost()" style="padding: 10px; background: green; color: white; border: none;">Publish to Archive</button>
+    </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Mekonnen Solomon | Ministry of Agriculture, Ethiopia</p>
+        <a href="#" class="admin-btn" onclick="checkAdmin()">Admin Login</a>
+    </div>
+</footer>
+
+<script type="module">
+    // --- FIREBASE CONFIGURATION ---
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // You must paste your Firebase credentials here (See previous instructions)
+    const firebaseConfig = {
+        apiKey: "AIzaSyAUKAxVATOakSiawHCaIPFoU_t14IGRnPs",
+        authDomain: "ethiopianhorticulture.firebaseapp.com",
+        projectId: "ethiopianhorticulture",
+        storageBucket: "ethiopianhorticulture.firebasestorage.app",
+        messagingSenderId: "361798703422",
+        appId: "1:361798703422:web:c62ada5834ddd2e0bb746f",
+        measurementId: "G-NXQ7T3ZTHE"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Load Archive
+    async function loadArchive() {
+        const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
+        const snap = await getDocs(q);
+        const feed = document.getElementById('blog-feed');
+        feed.innerHTML = snap.empty ? '<p>No previous entries found.</p>' : '';
+        snap.forEach(doc => {
+            const p = doc.data();
+            feed.innerHTML += `<div style="margin-bottom:20px;">
+                <strong>${p.title}</strong><br>
+                <small>${new Date(p.timestamp).toLocaleDateString()}</small>
+            </div>`;
+        });
+    }
+
+    window.subscribeUser = async () => {
+        const email = document.getElementById('subEmail').value;
+        if(email) {
+            await addDoc(collection(db, "subscribers"), { email, date: new Date().toISOString() });
+            alert("Thank you for subscribing, Mekonnen Solomon has received your request.");
+        }
+    };
+
+    window.checkAdmin = () => {
+        if(prompt("Password:") === "Ethiopia2025") {
+            document.getElementById('adminPanel').style.display = 'block';
+        }
+    };
+
+    window.publishPost = async () => {
+        const title = document.getElementById('postTitle').value;
+        const content = document.getElementById('postContent').value;
+        await addDoc(collection(db, "posts"), { title, content, timestamp: Date.now() });
+        alert("Published!");
+        location.reload();
+    };
+
+    loadArchive();
+</script>
+</body>
+</html>
+
+api
